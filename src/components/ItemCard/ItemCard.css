@@ -3,14 +3,26 @@
   position: relative;
   display: flex;
   justify-content: center;
+  max-width: 325px;
+  max-height: 328px;
+  width: 100%;
 }
 
 .card__name {
   position: absolute;
   top: 15px;
-  margin: 0;
+  margin: 2px 12px;
+  background: rgba(255, 255, 255, 1);
+  font-family: "Cabinet Grotesk", sans-serif;
+  line-height: 20px;
+  letter-spacing: 0;
+  opacity: 60%;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .card__image {
   width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
 }

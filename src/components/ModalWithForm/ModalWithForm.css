@@ -80,6 +80,7 @@
 
 .form__label {
   margin-bottom: 24px;
+  font-weight: bold;
 }
 
 .modal__submit {
@@ -91,7 +92,11 @@
   color: white;
 }
 
-/* .modal__label_type_radio {
+.modal__label_type_radio {
+  cursor: pointer;
   opacity: 50%;
-  color: black;
-} */
+}
+
+.modal__label_type_radio:has(.modal__radio-input:checked) {
+  opacity: 1;
+}
