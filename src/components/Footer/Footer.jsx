@@ -8,5 +8,6 @@ function Footer() {
     </footer>
   );
 }
+//there is no need in dynamic updates of the year since this is the year of creation this project
 
 export default Footer;

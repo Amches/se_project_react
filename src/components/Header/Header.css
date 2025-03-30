@@ -6,7 +6,7 @@
 
 .header__add-clothes-btn {
   margin-left: auto;
-  font-family: "CabinetGrotesk", serif;
+  font-family: "CabinetGrotesk", sans-serif;
   left: 1015px;
   margin-left: auto;
   margin-right: 20px;
@@ -23,7 +23,7 @@
   gap: 12px;
   align-items: center;
   display: flex;
-  font-family: "CabinetGrotesk", serif;
+  font-family: "CabinetGrotesk", sans-serif;
   line-height: 25px;
   letter-spacing: 0;
   font-weight: 700;
@@ -34,7 +34,7 @@
 }
 
 .header__date-and-location {
-  font-family: "CabinetGrotesk", serif;
+  font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0;
