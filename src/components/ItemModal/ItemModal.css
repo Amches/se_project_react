@@ -1,7 +1,12 @@
 .modal__content_type_image {
   padding: 0;
   border-radius: 16px;
-  max-height: 610px;
+  height: 610px;
+  background-color: white;
+  position: relative;
+  max-width: 496px;
+  border-radius: 20px;
+  width: 100%;
 }
 
 .modal__image {
@@ -10,6 +15,7 @@
 }
 
 .modal__weather {
+  margin: 0;
   font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
   line-height: 24px;
@@ -17,6 +23,7 @@
 }
 
 .modal__caption {
+  margin: 0;
   font-family: "CabinetGrotesk", sans-serif;
   font-weight: 700;
   line-height: 24px;
@@ -24,6 +31,21 @@
 }
 
 .modal__footer {
-  text-align: start;
-  margin: 20px 32px;
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+}
+
+.modal__delete {
+  color: #ff4d00;
+  position: absolute;
+  right: 32px;
+  border: none;
+  font-family: "CabinetGrotesk", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  padding: 0;
 }

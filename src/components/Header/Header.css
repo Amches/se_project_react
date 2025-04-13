@@ -5,11 +5,10 @@
 }
 
 .header__add-clothes-btn {
-  margin-left: auto;
   font-family: "CabinetGrotesk", sans-serif;
-  left: 1015px;
-  margin-left: auto;
   margin-right: 20px;
+  margin-left: 20px;
+
   outline: none;
   font-size: 20px;
   font-weight: 700;
@@ -38,8 +37,14 @@
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0;
+  margin-right: auto;
 }
 
 .header__username {
   margin: 0;
+}
+
+.header__link {
+  text-decoration: none;
+  color: black;
 }
