@@ -3,7 +3,7 @@ import "./ItemModal.css";
 function ItemModal({ activeModal, card, onClose, handleDeleteItem }) {
   const deleteItem = () => {
     handleDeleteItem(card._id);
-    onclose();
+    onclose;
   };
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>

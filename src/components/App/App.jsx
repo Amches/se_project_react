@@ -20,12 +20,12 @@ function App() {
     city: "",
   });
   const [activeModal, setActiveModal] = useState("");
-  const [SelectedCard, setSelectedCard] = useState({});
-  const [CurrentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
+  const [selectedCard, setSelectedCard] = useState({});
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
 
   const handleToggleSwitchChange = () => {
-    setCurrentTemperatureUnit(CurrentTemperatureUnit === "F" ? "C" : "F");
+    setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
   };
 
   const handleCardClick = (card) => {
@@ -82,9 +82,28 @@ function App() {
       .catch(console.error);
   }, []);
 
+  useEffect(() => {
+    if (!activeModal) return;
+
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        handleCloseModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [activeModal]);
+
   return (
     <CurrentTemperatureUnitContext.Provider
-      value={{ CurrentTemperatureUnit, handleToggleSwitchChange }}
+      value={{
+        CurrentTemperatureUnit: currentTemperatureUnit,
+        handleToggleSwitchChange,
+      }}
     >
       <div className="page">
         <div className="page__content">
@@ -121,7 +140,7 @@ function App() {
         />
         <ItemModal
           activeModal={activeModal}
-          card={SelectedCard}
+          card={selectedCard}
           onClose={closeActiveModal}
           handleDeleteItem={handleDeleteItem}
         />

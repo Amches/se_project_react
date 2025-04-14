@@ -32,4 +32,4 @@ function addItem({ name, imageUrl, weather }) {
   });
 }
 
-export { getItems, deleteItem, addItem };
+export { getItems, deleteItem, addItem, checkResponse };

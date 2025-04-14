@@ -31,7 +31,7 @@
 }
 
 .modal__footer {
-  padding: 20px 28px;
+  margin: 20px 28px;
   display: flex;
   flex-direction: column;
   position: relative;
