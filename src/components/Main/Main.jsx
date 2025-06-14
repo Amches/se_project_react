@@ -4,7 +4,7 @@ import ItemCard from "../ItemCard/ItemCard.jsx";
 import { useContext } from "react";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
-function Main({ weatherData, handleCardClick, clothingItems }) {
+export default function Main({ weatherData, handleCardClick, clothingItems }) {
   const { CurrentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
   return (
@@ -34,5 +34,3 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
     </main>
   );
 }
-
-export default Main;

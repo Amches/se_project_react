@@ -26,3 +26,31 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
+
+.card__like-button {
+  width: 21px;
+  height: 19px;
+  background: transparent url("../../images/inactive-like-button.svg") center
+    no-repeat;
+  background-size: 21px 18px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.card__like-button_is-active {
+  background: transparent url("../../images/active-like-button.svg") center
+    no-repeat;
+}
+
+.card__content {
+  position: absolute;
+  top: 20px;
+  display: flex;
+}
