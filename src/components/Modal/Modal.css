@@ -43,8 +43,7 @@
   right: 16px;
   width: 24px;
   height: 24px;
-  background: transparent url("../../images/gray-close-icon.svg") center
-    no-repeat;
+  background: transparent url("../../assets/Close.svg") center no-repeat;
   background-size: contain;
   border: none;
   padding: 0;

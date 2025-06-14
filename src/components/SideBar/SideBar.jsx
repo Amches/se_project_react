@@ -5,6 +5,7 @@ import avatar from "../../assets/avatar.png";
 
 export default function SideBar({ handleEditProfile, handleSignOut }) {
   const { currentUser } = useContext(CurrentUserContext);
+
   return (
     <div className="sidebar">
       <div className="sidebar__user">
@@ -13,7 +14,7 @@ export default function SideBar({ handleEditProfile, handleSignOut }) {
           src={currentUser.avatar || avatar}
           alt="User Avatar"
         />
-        <p className="sidebar__user-name">{currentUser.name}</p>
+        <p className="sidebar__username">{currentUser.name}</p>
       </div>
       <ul className="sidebar__nav">
         <li className="sidebar__nav-item">

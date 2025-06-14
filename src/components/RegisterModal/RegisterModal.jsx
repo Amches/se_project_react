@@ -7,24 +7,17 @@ export default function RegisterModal({
   onSubmit,
   onClickLogin,
 }) {
-  const {
-    values,
-    errors,
-    handleChange,
-
-    resetForm,
-    isValid,
-  } = useFormAndValidation({
-    email: "",
-    password: "",
-    name: "",
-    avatar: "",
-  });
+  const { values, errors, handleChange, resetForm, isValid } =
+    useFormAndValidation({
+      email: "",
+      password: "",
+      name: "",
+      avatar: "",
+    });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if all fields have values and there are no errors
     if (isValid && Object.keys(errors).length === 0) {
       onSubmit(values);
     }

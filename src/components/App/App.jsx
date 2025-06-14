@@ -82,7 +82,7 @@ export default function App() {
   };
 
   function handleCardDelete() {
-    const token = localStorage.getItem("jwt"); // Define token
+    const token = localStorage.getItem("jwt");
     const makeRequest = () =>
       deleteItem(selectedCard._id, token).then(() => {
         setClothingItems((cards) =>
@@ -160,7 +160,7 @@ export default function App() {
 
   const handleUpdateProfile = (updatedData) => {
     const token = localStorage.getItem("jwt");
-    setIsLoading(true); // Add loading state
+    setIsLoading(true);
     updateProfile({
       ...updatedData,
       token,
@@ -174,7 +174,7 @@ export default function App() {
         setErrorMessage(error.message);
       })
       .finally(() => {
-        setIsLoading(false); // Reset loading state
+        setIsLoading(false);
       });
   };
 
@@ -190,7 +190,6 @@ export default function App() {
       })
       .catch((err) => {
         console.error(err);
-        // Optionally set an error message for the user
       });
   };
 

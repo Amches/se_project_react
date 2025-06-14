@@ -2,34 +2,28 @@ import "./ClothesSection.css";
 import ItemCard from "../ItemCard/ItemCard";
 
 export default function ClothesSection({
-  onCardClick,
+  handleCardClick,
   handleAddClick,
-  clothingItems,
   onCardLike,
+  clothingItems,
 }) {
   return (
     <div className="clothes-section">
-      <div className="clothes-section__button">
-        <p className="clothes-section__text">Your Items</p>
-        <button
-          className="clothes-section__add-button"
-          type="button"
-          onClick={handleAddClick}
-        >
-          + Add New
+      <div className="clothes-section__header">
+        <p className="clothes-section__text">Your items</p>
+        <button className="clothes-section__button" onClick={handleAddClick}>
+          + Add new
         </button>
       </div>
-      <ul className="clothes-section__items">
-        {clothingItems.map((item) => {
-          return (
-            <ItemCard
-              key={item._id}
-              item={item}
-              onCardClick={onCardClick}
-              onCardLike={onCardLike}
-            />
-          );
-        })}
+      <ul className="clothes-section__list">
+        {clothingItems.map((filteredCard, index) => (
+          <ItemCard
+            key={filteredCard._id || `item-${index}`}
+            item={filteredCard}
+            onCardClick={handleCardClick}
+            onCardLike={onCardLike}
+          />
+        ))}
       </ul>
     </div>
   );

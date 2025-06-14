@@ -39,14 +39,20 @@
   gap: 12px;
 }
 
-.modal__delete {
-  color: #ff4d00;
+.modal__close_preview {
   position: absolute;
-  right: 32px;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  background: transparent url("/src/images/white-close-icon.svg") center
+    no-repeat;
+  background-size: contain;
   border: none;
-  font-family: "CabinetGrotesk", sans-serif;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0;
   padding: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.modal__close_preview:hover {
+  transform: scale(1.1);
 }
