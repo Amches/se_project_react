@@ -66,6 +66,7 @@ export default function AddItemModal({
       <label htmlFor="imageUrl" className="form__label">
         Image
         <input
+          name="imageUrl"
           type="url"
           className="modal__input"
           id="imageUrl"
@@ -83,7 +84,7 @@ export default function AddItemModal({
         <label htmlFor="hot" className="modal__label modal__label_type_radio">
           <input
             id="hot"
-            name="radio"
+            name="weather"
             type="radio"
             className="modal__radio-input"
             onChange={handleChange}
@@ -95,7 +96,7 @@ export default function AddItemModal({
         <label htmlFor="warm" className="modal__label modal__label_type_radio">
           <input
             id="warm"
-            name="radio"
+            name="weather"
             type="radio"
             className="modal__radio-input"
             onChange={handleChange}
@@ -107,7 +108,7 @@ export default function AddItemModal({
         <label htmlFor="cold" className="modal__label modal__label_type_radio">
           <input
             id="cold"
-            name="radio"
+            name="weather"
             type="radio"
             className="modal__radio-input"
             onChange={handleChange}

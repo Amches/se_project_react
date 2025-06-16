@@ -1,7 +1,7 @@
 .modal__content_type_image {
   padding: 0;
   border-radius: 16px;
-  height: 610px;
+  max-height: 610px;
   background-color: white;
   position: relative;
   max-width: 496px;
@@ -32,7 +32,7 @@
 }
 
 .modal__footer {
-  margin: 20px 28px;
+  margin: 20px 0 32px 32px;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -45,14 +45,19 @@
   right: 16px;
   width: 24px;
   height: 24px;
-  background: transparent url("/src/images/white-close-icon.svg") center
-    no-repeat;
+  background: transparent url("../../assets/Close.svg") center no-repeat;
   background-size: contain;
   border: none;
   padding: 0;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
+
+.modal__delete_btn {
+  position: absolute;
+  right: 32px;
+}
+
 .modal__close_preview:hover {
   transform: scale(1.1);
 }

@@ -4,8 +4,7 @@ import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit
 import { useContext } from "react";
 
 export default function WeatherCard({ weatherData }) {
-  const { CurrentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
-  console.log(weatherData);
+  const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
   const filteredOptions = weatherOptions.filter((option) => {
     return (
@@ -24,8 +23,8 @@ export default function WeatherCard({ weatherData }) {
   return (
     <section className="weather-card">
       <p className="weatger-card__temp">
-        {weatherData.temp[CurrentTemperatureUnit]}&deg;
-        {CurrentTemperatureUnit}
+        {weatherData.temp[currentTemperatureUnit]}&deg;
+        {currentTemperatureUnit}
       </p>
       <img
         src={weatherOption?.url}

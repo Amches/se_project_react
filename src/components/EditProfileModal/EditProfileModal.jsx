@@ -4,7 +4,7 @@ import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { useFormAndValidation } from "../../hooks/useFormAndValidation";
 
 export default function EditProfileModal({ isOpen, onSubmit, onClose }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
   const { values, handleChange, resetForm, errors, isValid, setValues } =
     useFormAndValidation({
       name: currentUser?.name || "",

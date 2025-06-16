@@ -3,7 +3,7 @@ import { useContext } from "react";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 export default function ItemCard({ item, onCardClick, onCardLike }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
   const token = localStorage.getItem("jwt");
 
   const handleCardClick = () => {
@@ -19,7 +19,6 @@ export default function ItemCard({ item, onCardClick, onCardLike }) {
 
   return (
     <li className="card">
-      <h2 className="card__name">{item.name}</h2>
       <img
         onClick={handleCardClick}
         className="card__image"
@@ -35,9 +34,7 @@ export default function ItemCard({ item, onCardClick, onCardLike }) {
               isLiked ? "card__like-button_is-active" : ""
             }`}
             onClick={handleLikeClick}
-          >
-            ♥
-          </button>
+          ></button>
         )}
       </div>
     </li>

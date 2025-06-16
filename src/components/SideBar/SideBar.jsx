@@ -4,7 +4,7 @@ import "./SideBar.css";
 import avatar from "../../assets/avatar.png";
 
 export default function SideBar({ handleEditProfile, handleSignOut }) {
-  const { currentUser } = useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <div className="sidebar">

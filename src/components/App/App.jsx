@@ -30,13 +30,12 @@ import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 export default function App() {
   const [weatherData, setWeatherData] = useState({
-    type: "",
-    temp: { F: 999, C: 999 },
     city: "",
     condition: "",
     isDay: false,
+    temp: { F: 999, C: 999 },
+    type: "",
   });
-
   const [clothingItems, setClothingItems] = useState([]);
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
@@ -272,7 +271,7 @@ export default function App() {
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}
     >
-      <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
+      <CurrentUserContext.Provider value={currentUser}>
         <div className="page">
           <div className="page__content">
             <Header
@@ -289,7 +288,7 @@ export default function App() {
               <Route
                 path="/"
                 element={
-                  weatherData.temp ? (
+                  weatherData.type != "" ? (
                     <Main
                       weatherData={weatherData}
                       clothingItems={clothingItems}
