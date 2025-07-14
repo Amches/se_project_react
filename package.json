@@ -3,11 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://amcheswtwr.river-haven.com",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && scp -r ./dist/* dan8363@amcheswtwr.river-haven.com:/home/dan8363/se_express2/frontend"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
