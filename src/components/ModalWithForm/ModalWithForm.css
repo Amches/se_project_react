@@ -92,6 +92,23 @@
   color: white;
 }
 
+.modal__submit:hover {
+  opacity: 60%;
+}
+
+.modal__submit[disabled] {
+  background-color: #999;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal__error {
+  color: red;
+  font-size: 12px;
+  margin: 0px;
+  position: absolute;
+}
+
 .modal__label_type_radio {
   cursor: pointer;
   opacity: 50%;

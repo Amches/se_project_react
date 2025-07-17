@@ -1,28 +1,44 @@
-import "./ModalWithForm.css";
+import "../ModalWithForm/ModalWithForm.css";
+import Modal from "../Modal/Modal.jsx";
 
-function ModalWithForm({
+export default function ModalWithForm({
   children,
   buttonText,
   title,
   isOpen,
   onClose,
   onSubmit,
+  isLoading,
+  disabled,
+  secondaryButtonText,
+  secondaryButtonAction,
 }) {
   return (
-    <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
-      <div className="modal__content">
-        <p className="modal__title">{title}</p>
-        <button onClick={onClose} type="button" className="modal__close" />
+    isOpen && (
+      <Modal onClose={onClose} isOpen={isOpen}>
+        <h2 className="modal__title">{title}</h2>
         <form onSubmit={onSubmit} className="modal__form">
           {children}
-
-          <button type="submit" className="modal__submit">
-            {buttonText}
-          </button>
+          <div className="modal__buttons-container">
+            <button
+              type="submit"
+              className="modal__submit"
+              disabled={isLoading || disabled}
+            >
+              {buttonText}
+            </button>
+            {secondaryButtonText && (
+              <button
+                type="button"
+                className="modal__secondary-btn"
+                onClick={secondaryButtonAction}
+              >
+                {secondaryButtonText}
+              </button>
+            )}
+          </div>
         </form>
-      </div>
-    </div>
+      </Modal>
+    )
   );
 }
-
-export default ModalWithForm;
