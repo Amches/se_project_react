@@ -1,4 +1,7 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://api.amcheswtwr.river-haven.com"
+    : "http://localhost:3001";
 const headers = { "Content-Type": "application/json" };
 
 function checkResponse(res) {
@@ -33,3 +36,4 @@ function addItem({ name, imageUrl, weather }) {
 }
 
 export { getItems, deleteItem, addItem };
+export default checkResponse();
